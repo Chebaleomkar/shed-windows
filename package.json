@@ -1,0 +1,27 @@
+{
+  "name": "shed",
+  "version": "0.2.0",
+  "description": "Message the coding agents on your PC from your phone.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test",
+    "tailscale": "node server/tailscale.js",
+    "tailscale:off": "node server/tailscale.js off",
+    "tunnel": "node server/tunnel.js",
+    "autostart": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/autostart.ps1"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@receptron/laya": "^0.1.2",
+    "@xterm/headless": "^6.0.0",
+    "node-pty": "^1.1.0",
+    "qrcode": "^1.5.4",
+    "web-push": "^3.6.7"
+  }
+}
